@@ -1,0 +1,49 @@
+.wrapper {
+  width: 180px;
+  border: 2px solid grey;
+}
+
+.number {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: flex;
+}
+
+.button > div {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 14px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.plus {
+  background: rgb(38, 192, 38);
+}
+
+.plus:active {
+  background: rgb(2, 156, 2);
+}
+
+.refresh {
+  background: rgb(253, 230, 20);
+}
+
+.refresh:active {
+  background: rgb(197, 178, 2);
+}
+
+.minus {
+  background: rgb(252, 0, 0);
+}
+
+.minus:active {
+  background: rgb(194, 0, 0);
+}
