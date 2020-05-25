@@ -8,11 +8,11 @@ export class Component extends React.Component {
   }
 
   plusClick() {
-    this.setState({ number: this.state.number + 1 });
+    this.setState((oldState, oldParams) => ({ number: oldState.number + 1 }));
   }
 
   minusClick() {
-    this.setState({ number: this.state.number - 1 });
+    this.setState((oldState, oldParams) => ({ number: oldState.number - 1 }));
   }
 
   refreshClick() {
