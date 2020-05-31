@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Component } from "./homework2/Component";
+import { Component } from "./homework3/Component";
 import "./homework2/style.css";
 
 ReactDOM.render(
