@@ -47,7 +47,7 @@ export const App = () => {
             path="/login"
           />
           <Route
-            render={() => <Home />}
+            render={() => <Home user={user} />}
             user={user}
             onLogout={onLogout}
             users={users}
