@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Login } from "./Login";
 import { Register } from "./Register";
 import { Users } from "./Users.jsx";
-import { Header } from "./Header";
 import { Home } from "./Home";
 import { BrowserRouter } from "react-router-dom";
 import { Link, Route, Switch, Redirect } from "react-router-dom";
@@ -57,7 +56,7 @@ export const App = () => {
           {!user && <Redirect to="/login" />}
           <Redirect to="/login" />
         </Switch>
-        <Header user={user} />
+
         <br />
         <br />
         <Users users={users} />
