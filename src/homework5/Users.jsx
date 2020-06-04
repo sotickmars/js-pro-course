@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 
-export const Users = () => {
-  const [users, setusers] = useState([
-    {
-      login: "Simaka",
-      pass: "",
-      name: "",
-      date: "",
-    },
-  ]);
+export const Users = ({ users }) => {
   return (
-    <>
-      <ul>
-        <li>{users.login}</li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </>
+    <ul>
+      {users.map((users, i) => {
+        return (
+          <li key={users.id}>
+            Login: {users.login}
+            Other: {users.other}
+          </li>
+        );
+      })}
+    </ul>
   );
 };
