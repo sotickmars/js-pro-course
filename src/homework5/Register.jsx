@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
   const [userLogin, setUSerLogin] = useState();

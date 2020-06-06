@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Users = ({ users, addUsers }) => {
   return (
@@ -15,6 +16,9 @@ export const Users = ({ users, addUsers }) => {
         })}
       </ul>
       <button onClick={() => addUsers()}>+</button>
+      <button>
+        <Link to="/main">Go To MAIN</Link>
+      </button>
     </>
   );
 };

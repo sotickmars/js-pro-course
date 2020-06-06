@@ -13,11 +13,11 @@ export const Main = ({ user, addUsers, users }) => {
           render={() => <Users user={user} users={users} addUsers={addUsers} />}
           path="/main/users"
         />
+        <Route render={() => <Home user={user} />} path="/main/home" />
         <Route
           render={() => (
             <>
               <Header user={user} />
-              <Home />
               <SideMenu user={user} />
             </>
           )}

@@ -7,14 +7,16 @@ export const SideMenu = ({ user }) => {
       <ul>
         <li>
           <Link to="/main/users" user={user}>
-            Пользователи
+            Users
           </Link>
         </li>
         <li>
-          <Link to="/main">Главная</Link>
+          <Link to="/main/home">Home</Link>
         </li>
         <li>
-          <button>Выход</button>
+          <button>
+            <Link to="/login">Exit</Link>
+          </button>
         </li>
       </ul>
     </nav>
