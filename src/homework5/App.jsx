@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Login } from "./Login";
 import { Register } from "./Register";
-import { Users } from "./Users.jsx";
-import { Home } from "./Home";
+import { Main } from "./Main";
 import { BrowserRouter } from "react-router-dom";
 import { Link, Route, Switch, Redirect } from "react-router-dom";
 
@@ -11,7 +10,8 @@ export const App = () => {
   const [user, setUser] = useState();
 
   const addUsers = () => {
-    setUsers([...users, users[0]]);
+    // console.log(user);
+    setUsers([...users, user]);
   };
 
   const onLogout = () => setUser(null);
@@ -47,20 +47,17 @@ export const App = () => {
             path="/login"
           />
           <Route
-            render={() => <Home user={user} />}
+            render={() => (
+              <Main user={user} addUsers={addUsers} users={users} />
+            )}
             user={user}
             onLogout={onLogout}
             users={users}
-            path="/home"
+            path="/main"
           />
           {!user && <Redirect to="/login" />}
           <Redirect to="/login" />
         </Switch>
-
-        <br />
-        <br />
-        <Users users={users} />
-        <button onClick={() => addUsers()}>+</button>
       </BrowserRouter>
     </>
   );

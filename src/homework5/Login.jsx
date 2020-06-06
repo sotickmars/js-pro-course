@@ -24,7 +24,7 @@ export const Login = ({ checkUser, user }) => {
         <label htmlFor="">Password</label>
       </div>
       <button onClick={() => checkUser({ login, pass })}>
-        <Link to="/home">Войти</Link>
+        <Link to="/main">Войти</Link>
       </button>
       <button>
         <Link to="/register">Зарегестрироваться</Link>
