@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { Home } from "./Home";
 import { Users } from "./Users.jsx";
 import { SideMenu } from "./SideMenu.jsx";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export const Main = ({ user, addUsers, users }) => {
   return (

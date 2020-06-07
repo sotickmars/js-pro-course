@@ -3,14 +3,12 @@ import { Login } from "./Login";
 import { Register } from "./Register";
 import { Main } from "./Main";
 import { BrowserRouter } from "react-router-dom";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 export const App = () => {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState();
-
   const addUsers = () => {
-    // console.log(user);
     setUsers([...users, user]);
   };
 
@@ -31,6 +29,7 @@ export const App = () => {
     });
     if (userIs) {
       setUser(userIs);
+      return true;
     } else {
       alert("Error");
     }

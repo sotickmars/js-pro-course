@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const SideMenu = ({ user }) => {
   return (

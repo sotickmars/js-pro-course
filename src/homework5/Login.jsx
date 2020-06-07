@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-export const Login = ({ checkUser, user }) => {
+export const Login = ({ checkUser }) => {
   const [login, setLogin] = useState();
   const [pass, setPass] = useState();
+  const history = useHistory();
 
   return (
     <div>
@@ -23,8 +24,14 @@ export const Login = ({ checkUser, user }) => {
         />
         <label htmlFor="">Password</label>
       </div>
-      <button onClick={() => checkUser({ login, pass })}>
-        <Link to="/main">Войти</Link>
+      <button
+        onClick={() =>
+          checkUser({ login, pass }) && checkUser({ login, pass }) === true
+            ? history.push("/main")
+            : history.push("/login")
+        }
+      >
+        Войти
       </button>
       <button>
         <Link to="/register">Зарегестрироваться</Link>
