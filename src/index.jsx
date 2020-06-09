@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Component } from "./homework3/Component";
-import "./homework2/style.css";
+import { App } from "./classwork7/App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Component />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
