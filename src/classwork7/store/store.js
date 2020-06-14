@@ -1,4 +1,5 @@
 import { createStore } from "redux";
-import { counter } from "./reducers/content";
+import { rootReducer } from "../Second/combine";
+import { devToolsEnhancer } from "redux-devtools-extension";
 
-export const store = createStore(counter);
+export const store = createStore(rootReducer, devToolsEnhancer());

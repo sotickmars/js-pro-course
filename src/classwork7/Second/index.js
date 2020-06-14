@@ -1,9 +1,11 @@
 import { SecondComponent } from "./Second";
 import { connect } from "react-redux";
 
-const mapStateToProps = (state) => ({
-  counter: state,
-});
+const mapStateToProps = (state) => {
+  return {
+    counter: state.counter,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => ({
   increment: () => {
@@ -12,10 +14,13 @@ const mapDispatchToProps = (dispatch) => ({
   decrement: () => {
     dispatch({ type: "DECREMENT" });
   },
+  plus: (input) => {
+    dispatch({ type: "PLUS", input });
+  },
+  minus: (input) => {
+    dispatch({ type: "MINUS", input });
+  },
 });
-// const mapDispatchToProps = {
-//   increment: () => ({ type: 'INCREMENT' }),
-// };
 
 export const Second = connect(
   mapStateToProps,

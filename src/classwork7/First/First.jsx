@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-export const SecondComponent = ({
-  counter,
+export const FirstComponent = ({
+  counterTwo,
   increment,
   decrement,
   plus,
   minus,
 }) => {
-  const [input, setInput] = useState();
+  const [input1, setInput] = useState();
 
   const onChange = (evt) => {
     setInput(+evt.target.value);
@@ -15,12 +15,12 @@ export const SecondComponent = ({
 
   return (
     <div>
-      <input type="number" value={input} onChange={onChange} />
+      <input type="number" value={input1} onChange={onChange} />
       <button onClick={increment}>Inc</button>
-      {counter}
+      {counterTwo}
       <button onClick={decrement}>Dec</button>
-      <button onClick={() => plus(input)}>+</button>
-      <button onClick={() => minus(input)}>-</button>
+      <button onClick={() => plus(input1)}>+</button>
+      <button onClick={() => minus(input1)}>-</button>
     </div>
   );
 };

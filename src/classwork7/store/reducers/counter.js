@@ -6,6 +6,10 @@ export const counter = (state = initialState, action) => {
       return state + 1;
     case "DECREMENT":
       return state - 1;
+    case "PLUS":
+      return state + action.input;
+    case "MINUS":
+      return state - action.input;
     default:
       return state;
   }
